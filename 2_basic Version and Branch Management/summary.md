@@ -57,10 +57,10 @@ teknik yang digunakan untuk berkontribusi ke repo orang lain
 # Fork
 cloning repo tapi milik orang lain cloning akan memiliki data yang sama dengan yang ada di repo
 
-== Jangan sentuh branch master
-== Hindari edit branch developer secara langsung
-== Gunakan merge branch fitur-fitur ke branch develop
-== Gunakan branch master ketika semua sudah clear pada branch develop
+- Jangan sentuh branch master
+- Hindari edit branch developer secara langsung
+- Gunakan merge branch fitur-fitur ke branch develop
+- Gunakan branch master ketika semua sudah clear pada branch develop
 
 # Conflic
 terjadi jika dalam branch developer terdapat perubahan yang berbeda pada branch main, ketika akan di merge harus melakukan sesuatu terlebih dahulu, menyelesaikan conflic bias diambil kedua kode atau ambil salah satu yang akan di commit
