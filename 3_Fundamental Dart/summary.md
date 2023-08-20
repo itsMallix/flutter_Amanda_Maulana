@@ -19,10 +19,10 @@ void main(){
 Barisan kode yang tidak dijalankan dengan tujuan memberi catatan pada kode dan mencegah perintah dijalankan
 
 - Single Comment
-<Diawali "//">
+- Diawali "//"
 
 - Multiline Comment
-<Diawali "/*" diakhiri "*/">
+- Diawali "/*" diakhiri "*/"
 
 # Variable
 - Digunakan untuk menyimpan data
@@ -54,5 +54,3 @@ EX : final usia = 19;
 - Data yang dikelola disebut operand
 <> Aritmatik (+  -  *  /  %)
 <> Logical (==  ||  !)
-
-#
