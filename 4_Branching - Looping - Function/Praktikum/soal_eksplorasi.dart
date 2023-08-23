@@ -23,8 +23,24 @@ cekBilanganPrima() {
       }
     }
   }
+  stdout.write("\n");
+}
+
+// NO 2
+tampilkanTabel() {
+  stdout.write("Masukkan Angka : ");
+  var hasil = stdin.readLineSync();
+  int angka = int.parse(hasil!);
+
+  for (int i = 1; i <= angka; i++) {
+    for (int j = 1; j <= angka; j++) {
+      stdout.write("${i * j}\t");
+    }
+    print(' ');
+  }
 }
 
 void main() {
   cekBilanganPrima();
+  tampilkanTabel();
 }
