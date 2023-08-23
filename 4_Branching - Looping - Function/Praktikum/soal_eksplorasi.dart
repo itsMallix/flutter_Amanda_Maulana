@@ -1,4 +1,4 @@
-bool isPrime(int n) {
+bool bilagnanPrima(int n) {
   if (n <= 1) {
     return false;
   }
@@ -18,18 +18,4 @@ bool isPrime(int n) {
   return true;
 }
 
-List<int> findPrimes(int limit) {
-  List<int> primes = [];
-  for (int num = 2; num <= limit; num++) {
-    if (isPrime(num)) {
-      primes.add(num);
-    }
-  }
-  return primes;
-}
-
-void main() {
-  int limit = 50; // Ganti dengan batas atas yang diinginkan
-  List<int> primeNumbers = findPrimes(limit);
-  print("Bilangan prima antara 2 dan $limit adalah: $primeNumbers");
-}
+void main() {}

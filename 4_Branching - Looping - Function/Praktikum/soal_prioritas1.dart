@@ -5,7 +5,7 @@ import 'dart:io';
 jika nilai lebih dari 40 return B dan jika nilai lebih dari 0 return C 
 2. Tampilkan nilai 1 sd 10 pada layar menggunakan looping
 */
-void main(List<String> args) {
+void main() {
   // No 1
   stdout.write("Masukkan nilai : ");
   var input = stdin.readLineSync();
@@ -19,6 +19,8 @@ void main(List<String> args) {
   } else {
     print(" ");
   }
+
+  print("=" * 25);
 
   // No 2
   for (int i = 1; i <= 10; i++) {

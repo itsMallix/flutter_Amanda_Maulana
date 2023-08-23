@@ -1,5 +1,7 @@
 import 'dart:io';
 
+double phi = 3.14;
+
 /*
 1. Buatlah sebuah piramid bintang menggunakan looping 
 2. Buatlah sebuah jam pasir menggunakan looping
@@ -7,23 +9,9 @@ import 'dart:io';
 dan jalankan pada function main
 4. Tampilkan faktorial dari 10, 40, 50.
 */
-double phi = 3.14;
 
-luasLingkaran(phi, int r) {
-  double hasil = phi * r * r;
-  print("Luas Lingkaran = $hasil");
-}
-
-int hitungFaktorial(int numb) {
-  if (numb == 0 || numb == 1) {
-    return 1;
-  } else {
-    return numb * hitungFaktorial(numb - 1);
-  }
-}
-
-void main() {
-  // No 1
+// No 1
+buatPiramid() {
   stdout.write("Masukkan juumlah baris : ");
   var input = stdin.readLineSync();
   int tinggi = int.parse(input!);
@@ -39,8 +27,11 @@ void main() {
 
     stdout.write('\n');
   }
+  print("=" * 25);
+}
 
-  // No 2
+// No 2
+buatJampasir() {
   stdout.write("Masukkan jumlah baris : ");
   var input = stdin.readLineSync();
   int tinggi = int.parse(input!);
@@ -64,12 +55,34 @@ void main() {
     }
     print(' ');
   }
-
-  // No 3
   print("=" * 25);
-  luasLingkaran(phi, 12);
+}
 
-  // No 4
+// No 3
+luasLingkaran(phi) {
+  stdout.write("Masukkan jari-jari : ");
+  var jariJari = stdin.readLineSync();
+  int r = int.parse(jariJari!);
+
+  double hasil = phi * r * r;
+  stdout.write("Jari-jari = $r\nLuas Lingkaran = $hasil\n");
+  print("=" * 25);
+}
+
+// No 4
+int hitungFaktorial(int numb) {
+  if (numb == 0 || numb == 1) {
+    return 1;
+  } else {
+    return numb * hitungFaktorial(numb - 1);
+  }
+}
+
+void main() {
+  buatPiramid();
+  buatJampasir();
+  luasLingkaran(phi);
+
   stdout.write('Masukkan bilangan: ');
   var hasil = stdin.readLineSync();
   int bilangan = int.parse(hasil!);

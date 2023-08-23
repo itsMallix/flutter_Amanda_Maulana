@@ -15,7 +15,7 @@ double tagihan(buku, pensil, tas) {
   return totalBarang(buku, pensil, tas) - diskon(buku, pensil, tas);
 }
 
-void main(List<String> args) {
+void main() {
   print(totalBarang(buku, pensil, tas));
   print(diskon(buku, pensil, tas));
   print(tagihan(buku, pensil, tas));
