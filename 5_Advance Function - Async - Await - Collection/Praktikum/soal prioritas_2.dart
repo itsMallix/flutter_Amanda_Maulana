@@ -1,7 +1,6 @@
-//  NO 1
-
 import 'dart:io';
 
+//  NO 1
 soalPrioritas2_no1() {
   List<List<String>> listData = [
     //formatting list
@@ -17,6 +16,7 @@ soalPrioritas2_no1() {
   print("=" * 25);
 }
 
+//  NO 2
 soalPrioritas2_no2() {
   List<int> sampleInput = [1, 2, 3, 5, 5, 7];
 
@@ -31,6 +31,7 @@ soalPrioritas2_no2() {
   print("=" * 25);
 }
 
+//  NO 3
 Future soalPrioritas_no3() async {
   stdout.write("Inputkan angka : ");
   var hasil = await stdin.readLineSync();
