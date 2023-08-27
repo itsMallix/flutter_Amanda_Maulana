@@ -1,5 +1,7 @@
 //  NO 1
 
+import 'dart:io';
+
 soalPrioritas2_no1() {
   List<List<String>> listData = [
     //formatting list
@@ -29,7 +31,24 @@ soalPrioritas2_no2() {
   print("=" * 25);
 }
 
+Future soalPrioritas_no3() async {
+  stdout.write("Inputkan angka : ");
+  var hasil = await stdin.readLineSync();
+  int angka = int.parse(hasil!);
+  int faktorial = 1;
+
+  if (angka == 0 || angka == 1) {
+    stdout.write("Faktorial dari 1! = 1");
+  } else {
+    for (int i = 1; i <= angka; i++) {
+      faktorial *= i; // looping myari faktorial
+    }
+    stdout.write("Faktorial dari $angka! = ${faktorial}"); // tampilkan hasil
+  }
+}
+
 void main() {
   soalPrioritas2_no1();
   soalPrioritas2_no2();
+  soalPrioritas_no3();
 }
