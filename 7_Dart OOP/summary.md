@@ -32,6 +32,6 @@
 - Seperti variabel tetapi terletak dalam sebuah class
 
 # Method
-- sifat suatu class
+- Sifat suatu class
 - Aktivitas yang dapat dikerjakan suatu class
 - Memiliki sifat seperti fungsi
