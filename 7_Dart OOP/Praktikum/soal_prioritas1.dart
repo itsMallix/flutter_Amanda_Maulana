@@ -1,8 +1,8 @@
+// NO1 & NO2
+
 class Hewan {
   int _berat = 0;
   int get berat => _berat;
-  set berat(int value) => _berat = value;
-
   Hewan(this._berat);
 }
 
@@ -19,8 +19,12 @@ class Mobil {
   }
 
   void totalMuatan() {
+    int totalBerat = 0;
+    for (var hewan in muatan) {
+      totalBerat += hewan.berat;
+    }
     print(
-      "Kapasitas maximum: $kapasitas\nTerisi : ${muatan.length}",
+      "Kapasitas maximum: $kapasitas\nTerisi : ${muatan.length} hewan\nTotal berat muatan: $totalBerat",
     );
   }
 }
