@@ -35,7 +35,7 @@ class Student {
 
   void tampilkanCourse() {
     if (courses.length == 0) {
-      print("Courses $name masih kosong");
+      print("Courses $name kelas $kelas masih kosong");
     } else {
       print("Courses milik $name kelas $kelas:");
       print("-" * 35);
@@ -77,7 +77,7 @@ void main() {
   calculator.pembagian();
 
   print("=" * 25);
-  Student student1 = new Student(name: "amanda", kelas: "Flutter-C");
+  Student student1 = new Student(name: "amanda", kelas: "C");
   student1.tampilkanCourse();
 
   Course course1 = new Course(judul: "Flutter", deskripsi: "Belajar Flutter");
