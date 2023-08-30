@@ -1,18 +1,18 @@
 // NO1 & NO2
-
 class Hewan {
   int _berat = 0;
   int get berat => _berat;
-  Hewan(this._berat);
+  Hewan(this._berat); //constructor
 }
 
 class Mobil {
   int kapasitas = 10;
-  List<Hewan> muatan = [];
+  List<Hewan> muatan = []; //buat nyimpen daftar hewan muatan
 
   void tambahanMuatan(List<Hewan> hewan) {
     for (var hewan in hewan) {
       if (hewan.berat <= kapasitas) {
+        //jika berat hewan kurang dari muatan maka masuk list
         muatan.add(hewan);
       }
     }
@@ -21,7 +21,7 @@ class Mobil {
   void totalMuatan() {
     int totalBerat = 0;
     for (var hewan in muatan) {
-      totalBerat += hewan.berat;
+      totalBerat += hewan.berat; //hitung total keseluruhan berat hewan
     }
     print(
       "Kapasitas maximum: $kapasitas\nTerisi : ${muatan.length} hewan\nTotal berat muatan: $totalBerat",
@@ -38,5 +38,5 @@ void main() {
 
   var mobil = Mobil();
   mobil.tambahanMuatan([ayam, sapi, kambing, dino, megalodon]);
-  mobil.totalMuatan();
+  mobil.totalMuatan(); //dino dan megalodon tidak masuk list karena overweight
 }
