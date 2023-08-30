@@ -34,21 +34,29 @@ class Student {
   Student({required this.name, required this.kelas});
 
   void tampilkanCourse() {
-    print("Courses milik $name kelas $kelas:");
+    if (courses.length == 0) {
+      print("Courses $name masih kosong");
+    } else {
+      print("Courses milik $name kelas $kelas:");
+      print("-" * 35);
+      print("| No |\tCourse | Deskripsi");
+      print("-" * 35);
+    }
     for (var i = 0; i < courses.length; i++) {
       var course = courses[i];
-      print("${i + 1}. ${course.judul} - ${course.deskripsi}");
+      print("| ${i + 1}  | ${course.judul} \t ${course.deskripsi}");
     }
+    print("-" * 35);
   }
 
   void tambahCourse(Course newCourse) {
     courses.add(newCourse);
-    // print("Course ${newCourse.judul} berhasil ditambahkan");
+    print("(+) Course ${newCourse.judul} berhasil ditambahkan");
   }
 
   void hapusCourse(Course delCourse) {
     courses.remove(delCourse);
-    print("Course ${delCourse.judul} berhasil dihapus");
+    print("(-) Course ${delCourse.judul} berhasil dihapus");
   }
 }
 
@@ -68,6 +76,7 @@ void main() {
   calculator.perkalian();
   calculator.pembagian();
 
+  print("=" * 25);
   Student student1 = new Student(name: "amanda", kelas: "Flutter-C");
   student1.tampilkanCourse();
 
