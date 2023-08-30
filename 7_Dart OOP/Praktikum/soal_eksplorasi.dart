@@ -12,7 +12,7 @@ class TokoBuku {
     for (var i = 0; i < daftarBuku.length; i++) {
       var buku = daftarBuku[i];
       print(
-          "| ${i + 1}  | ${buku.judul} \t ${buku.penerbit} \t ${buku.kategori} \t ${buku.harga}");
+          "| ${buku.id}  | ${buku.judul} \t ${buku.penerbit} \t ${buku.kategori} \t ${buku.harga}");
     }
   }
 
