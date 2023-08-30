@@ -6,21 +6,25 @@ class Calculator {
   Calculator(this._angka1, this._angka2);
 
   void penjumlahan() {
+    //method penjumlahan
     var hasil = print('$_angka1 + $_angka2 = ${_angka1 + _angka2}');
     return hasil;
   }
 
   void pengurangan() {
+    //method pengurangan
     var hasil = print('$_angka1 - $_angka2 = ${_angka1 - _angka2}');
     return hasil;
   }
 
   void perkalian() {
+    //method perkalian]
     var hasil = print('$_angka1 * $_angka2 = ${_angka1 * _angka2}');
     return hasil;
   }
 
   void pembagian() {
+    //method pembagian
     var hasil = print('$_angka1 / $_angka2 = ${_angka1 / _angka2}');
     return hasil;
   }
@@ -29,7 +33,7 @@ class Calculator {
 class Student {
   String name;
   String kelas;
-  List<Course> courses = [];
+  List<Course> courses = []; //buat nyimpen daftar course
 
   Student({required this.name, required this.kelas});
 
@@ -39,23 +43,23 @@ class Student {
     } else {
       print("Courses milik $name kelas $kelas:");
       print("-" * 35);
-      print("| No |\tCourse | Deskripsi");
+      print("| No |\tCourse | Deskripsi"); //biar keliatan kyak tabel
       print("-" * 35);
     }
     for (var i = 0; i < courses.length; i++) {
-      var course = courses[i];
+      var course = courses[i]; //indexing
       print("| ${i + 1}  | ${course.judul} \t ${course.deskripsi}");
-    }
+    } //nampilin yang ada dalam list
     print("-" * 35);
   }
 
   void tambahCourse(Course newCourse) {
-    courses.add(newCourse);
+    courses.add(newCourse); //menambahkan course ke list
     print("(+) Course ${newCourse.judul} berhasil ditambahkan");
   }
 
   void hapusCourse(Course delCourse) {
-    courses.remove(delCourse);
+    courses.remove(delCourse); // hapus course dari list
     print("(-) Course ${delCourse.judul} berhasil dihapus");
   }
 }
