@@ -56,11 +56,11 @@ class Buaya implements Hewan {
 }
 
 void main() {
-  var banteng = Hewan(); //abstract class tidak bisa langsung di isntance
-  print(banteng.mata);
-  print(banteng.kaki);
-  banteng.makan();
-  banteng.gelud();
+  // var banteng = Hewan(); //abstract class tidak bisa langsung di isntance
+  // print(banteng.mata);
+  // print(banteng.kaki);
+  // banteng.makan();
+  // banteng.gelud();
 
   var kucing = Kucing();
   print(kucing.mata);
