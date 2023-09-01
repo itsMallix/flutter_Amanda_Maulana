@@ -70,7 +70,7 @@ luasLingkaran(phi) {
 }
 
 // No 4
-int hitungFaktorial(int numb) {
+double hitungFaktorial(double numb) {
   if (numb == 0 || numb == 1) {
     return 1;
   } else {
@@ -85,8 +85,8 @@ void main() {
 
   stdout.write('Masukkan bilangan: ');
   var hasil = stdin.readLineSync();
-  int bilangan = int.parse(hasil!);
+  double bilangan = double.parse(hasil!);
 
-  int faktorial = hitungFaktorial(bilangan);
+  double faktorial = hitungFaktorial(bilangan);
   print('$bilangan! = $faktorial');
 }
