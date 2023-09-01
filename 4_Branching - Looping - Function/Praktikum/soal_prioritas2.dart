@@ -71,6 +71,7 @@ luasLingkaran(phi) {
 
 // No 4
 double hitungFaktorial(double numb) {
+  // fix pakai double biar tidak minus
   if (numb == 0 || numb == 1) {
     return 1;
   } else {
