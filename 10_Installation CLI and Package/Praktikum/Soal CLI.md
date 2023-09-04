@@ -1,19 +1,19 @@
-# Soal Prioritas 1
-# No 1 Instal paket pada proyek Flutter
-![Screenshot_no_1](../Screenshots/prioritas_1/no_1.png)
+# SOAL PRIORITAS 1
+- (1) Instal paket pada proyek Flutter menggunakan Flutter CLI:
+![ss_no_1](../Screenshots/prioritas_1/no_1.png)
 
-# No 2 Hapus paket pada proyek Flutter 
-![Screenshot_no_2](../Screenshots/prioritas_1/no_2.png)
+- (2) Hapus paket pada proyek Flutter menggunakan Flutter CLI
+![ss_no_1](../Screenshots/prioritas_1/no_2.png)
 
-# No 3 Aktifkan hot reload pada proyek flutter
-![Screenshot_no_3](../Screenshots/prioritas_1/no_3.png)
+- (3) Aktifkan Hot Reload pada proyek Flutter menggunakan Flutter CLI:
+![ss_no_1](../Screenshots/prioritas_1/no_3.png)
 
-# No 4 Buat APK atau IPA untuk proyek flutter
-![Screenshot_no_4](../Screenshots/prioritas_1/no_4.png)
+- (4) Buat APK atau IPA untuk proyek Flutter menggunakan Flutter CLI:
+![ss_no_1](../Screenshots/prioritas_1/no_4.png)
 
-# No5 Bersihkan cache pada proyek flutter
-![Screenshot_no_5](../Screenshots/prioritas_1/no_5.png)
+- (5) Bersihkan cache pada proyek Flutter menggunakan Flutter CLI:
+![ss_no_1](../Screenshots/prioritas_1/no_5.png)
 
-# Soal Prioritas 2
-# Modifikasi Project kalian sesuai perintah
-![Screenshot_no_1](../Screenshots/prioritas_2/no_1.png)
+# SOAL PRIORITAS 1
+- (1) Modifikasi project yang telah kalian buat sehingga mengubah Appbar dengan tulisan “Halo Alterra” dan di halaman bodynya berisi tulisan “Nama saya adalah (NamaKalian)”
+![ss_no_1](../Screenshots/prioritas_2/no_1.png)
