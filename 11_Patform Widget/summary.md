@@ -12,7 +12,7 @@ memanfaatkan widget dengan gaya berbeda pada android dan IOS
 
 # Scaffold
 - widget dasar untuk membangun sebuah halaman pada MaterialAPP
-- Struktur membentuk tata letak dasar sebuah halaman
+- Struktur membentuk tata letak dasar sebuah halaman <br />
 ![ss_scaffold](Screenshots/scaffold.png)
 
 # CupertinoAPP
@@ -20,10 +20,10 @@ memanfaatkan widget dengan gaya berbeda pada android dan IOS
 - widget yan gdigunakan pada IOS
 - diimport dari package:flutter/cupertino.dart
 - Struktur variable _themDark dibuat untuk menyimpan tema
-- diperlukan karena cupertino tidak menyediakan themeData.dark()
+- diperlukan karena cupertino tidak menyediakan themeData.dark() <br />
 ![ss_cupertino](Screenshots/cupertino.png)
-- Struktur yang pertama kali dibuka terletak pada home
+- Struktur yang pertama kali dibuka terletak pada home <br />
 ![ss_cupertino](Screenshots/cupertino_1.png)
-- Cupertino pageScaffold adalah scaffold versi cupertino
+- Cupertino pageScaffold adalah scaffold versi cupertino <br />
 ![ss_cupertino](Screenshots/cupertinoScaffold.png)
 
