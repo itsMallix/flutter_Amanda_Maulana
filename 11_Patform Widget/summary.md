@@ -5,9 +5,9 @@ memanfaatkan widget dengan gaya berbeda pada android dan IOS
 - widget dasar yang mengemas seluruh widget dalam aplikasi
 - widget digunakan android
 - diimport dari package::flutter/material.dart
-- Struktur widget yang pertama kali dibuka terletak pada bagian home
+- Struktur widget yang pertama kali dibuka terletak pada bagian home<br />
 ![ss_materialapp](Screenshots/materialAPP.png)
-- mengatur halaman juga dapat dilakaukan dengan menggunakan routes dan initialRoute
+- mengatur halaman juga dapat dilakaukan dengan menggunakan routes dan initialRoute <br />
 ![ss_materialapp](Screenshots/materialAPP_route.png)
 
 # Scaffold
