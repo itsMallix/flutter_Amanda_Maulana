@@ -13,7 +13,6 @@ Komunikasi efektif di tempat kerja memastikan bahwa tujuan organisasi dapat terc
 - Mengurangi tingkat pergantian karyawan
 
 # 5W Elemen Komunikasi Harold lasswell
-<hr>
 - who
 - (Says) what
 - (in which) channel
@@ -41,7 +40,7 @@ the most appropriate person depending on the subject
 Ringkas, pointing, ga diulang2, direct message, ga muter2, ga belibet. Tidak bertele-tele. Langsung sampaikan inti pesan yang perlu diinformasikan, hindari kata-kata yang berulang dan tidak perlu.
 
 ## courtesy = sopansantun
-memperhatikan dan menghargai perasaan orang lain, etically, dan coba tanya tentang pandangan orang lain tentang apa yg kita sampein, berusaha 1 frame. Hargai pendapat orang lain. Tanyakan pendapatnya terkait pesan yang disampaikan.
+memperhatikan dan menghargai perasaan orang lain, etically, dan coba tanya tentang pandangana orang lain tentang apa yg kita sampein, berusaha 1 frame. Hargai pendapat orang lain. Tanyakan pendapatnya terkait pesan yang disampaikan.
 
 ## concreteness = kongkret
 hal2 yg subjektif dan relatif, punya indikator yg jelas, misalnya kata “baik”, “harus oke”, dll, dilampirkan data dan fakta, jangan asumsi. Sampaikan dengan konkrit dan spesifik, bukan sesuatu yang mengawang-awang dan malah menimbulkan banyak misinterpretasi.
