@@ -35,4 +35,10 @@
 ### GridView
 - Mengatur widget dalam bentuk grid atau gallery
 
-### 
+## SUMMARY KELAS
+- agar tidak overflow pakai mediaQuery
+- cara lain dari mediaQuery adalah menggunakan double.infinity
+- double.infinity adalah cara untuk mengambil nilai max dari layar device
+- listview dan list tile berbeda pada listtile memiliki seperti decoration tile meliputi leading, title, sub title, dan trailing
+- widget flutter layout bisa di guakan pada 1 halaman
+- Getx sepertinya menarik
