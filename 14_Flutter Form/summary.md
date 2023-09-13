@@ -39,4 +39,10 @@
 - tombol yang hanya menampilkan icon
 - menjalankan function onPressed
 
+## Summary Kelas
+- pada textfield tidak ada validaor bawaan, perlu di declare pada fungsi onpressed (buttonnya)
+- perbedaan textfield dan textformfield terletak pada validatornya, textfield dibuat lebih simple dan sederhana
+- penggunaan icon diluar package flutter bisa menggunakan, image link, png atau font awesome, bisa menggunakan svg agar resolusi gambar tidak pecah ketika diubah ukurannya
+- untuk nampilkan data yang diinputkan perlu state, dan data disimpan pada variable atau list
+- controller di dart flutter menyimpan dalam tipe data string, jika ingin menyimpan tipe data lain bisa melakukan pharse pada nilai yang disimpan
 
