@@ -178,14 +178,17 @@ class _Prioritas2State extends State<Prioritas2> {
                           ),
                           Column(
                             children: [
-                              BuildDatePicker(context),
-                              BuildColorPicker(context),
-                              BuildFilePicker(),
+                              BuildDatePicker(
+                                  context), //panggil widget datepicker
+                              BuildColorPicker(
+                                  context), //panggil widget colorpicekr
+                              BuildFilePicker(), // panggil widget filepicker
                               SizedBox(height: 10.0),
                             ],
                           ),
-                          Divider(),
+                          Divider(), // garis pemisah
                           Container(
+                            //membuat button
                             width: double.infinity,
                             margin: EdgeInsets.all(10.0),
                             child: ElevatedButton(
@@ -202,13 +205,15 @@ class _Prioritas2State extends State<Prioritas2> {
                                     content: Text("Data Berhasil Ditambahkan"),
                                   ));
                                   dataList.add(Data(
+                                    // data yg akan di tambahkan ketika di submit
                                     name: name,
                                     nomor: nomor,
                                     file: file,
                                     color: _currentColor.value,
                                   ));
                                   setState(() {
-                                    formKey.currentState!.reset();
+                                    formKey.currentState!
+                                        .reset(); // reset state
                                   });
                                 }
                               },
@@ -222,7 +227,9 @@ class _Prioritas2State extends State<Prioritas2> {
                             ),
                           ),
                           SizedBox(height: 10.0),
-                          for (var i = 0; i < dataList.length; i++)
+                          for (var i = 0;
+                              i < dataList.length;
+                              i++) // nampilin jumlah dari data inputan
                             Column(
                               children: [
                                 Container(
@@ -233,12 +240,13 @@ class _Prioritas2State extends State<Prioritas2> {
                                   ),
                                   child: ListTile(
                                     leading: CircleAvatar(
+                                      // circle avatar
                                       backgroundColor: Color(0xff6750A4),
                                       child: Text(
                                         dataList[i].name != null &&
                                                 dataList[i].name!.isNotEmpty
                                             ? dataList[i].name![0].toUpperCase()
-                                            : '',
+                                            : '', // nampilkan huruf pertama dari nama inputan
                                         style: TextStyle(color: Colors.white),
                                       ),
                                     ),
@@ -250,8 +258,8 @@ class _Prioritas2State extends State<Prioritas2> {
                                         Text("Nomor : " +
                                             dataList[i].nomor.toString()),
                                         Text("Date : " +
-                                            DateFormat("dd-MM-yyyy")
-                                                .format(_dueDate)),
+                                            DateFormat("dd-MM-yyyy").format(
+                                                _dueDate)), // formatting date biar tida include waktu
                                         Row(
                                           children: [
                                             Text("Color : "),
@@ -278,6 +286,7 @@ class _Prioritas2State extends State<Prioritas2> {
                                             updateNomorController.text =
                                                 dataList[i].nomor.toString();
                                             showDialog(
+                                              // munculin dialog ketika icon edit di tekan
                                               context: context,
                                               builder: (BuildContext context) =>
                                                   AlertDialog(
@@ -301,7 +310,7 @@ class _Prioritas2State extends State<Prioritas2> {
                                                                 hintText: dataList[
                                                                         i]
                                                                     .name
-                                                                    .toString()),
+                                                                    .toString()), // nampilin value name
                                                           ),
                                                           TextFormField(
                                                             controller:
@@ -314,7 +323,7 @@ class _Prioritas2State extends State<Prioritas2> {
                                                                 hintText: dataList[
                                                                         i]
                                                                     .nomor
-                                                                    .toString()),
+                                                                    .toString()), // nampilin value nomor
                                                           ),
                                                           SizedBox(
                                                               height: 20.0),
@@ -382,7 +391,7 @@ class _Prioritas2State extends State<Prioritas2> {
                                                         () {
                                                           dataList.removeAt(i);
                                                           Navigator.of(context)
-                                                              .pop();
+                                                              .pop(); // menghapus value yang ditekan
                                                         },
                                                       );
                                                     },
