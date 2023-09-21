@@ -20,4 +20,5 @@
 - menampilkan data dengan navigation bisa namun kurang efektif
 - ketika membuat class bru kita bisa memuat datanya dari provider
 - provider akan berisi tumpukan properti
-- comsumer adalah cara untuk mengakses global provider
+- comsumer adalah cara untuk mengakses data global provider
+- dispose digunakan untuk membersihkan listener
