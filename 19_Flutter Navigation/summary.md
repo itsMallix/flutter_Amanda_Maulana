@@ -15,6 +15,8 @@ adalah bagaimana pengguna berpindah ke halaman lain
 
 # Summary Kelas
 - context mengacu pada halaman saat ini
+- pada saat pindah halaman sebenernya akan terbentuk seperti stack / numpuk
+- push replacement akan menghapus page sebelumnya agar tidak terjadi malfugsi seperti pada saat login menuju halaman dashboard
 - pada saat berpindah page bisa menggunakan parameter, parameter harus string
 - kalau ingin paramater tidak wajib diisi, bisa memakai null savety *String? param*, berarti nilai boleh null
 - pada bagian pemanggilan parameteri tambahkan *paramater ?? "nilai default"* 
