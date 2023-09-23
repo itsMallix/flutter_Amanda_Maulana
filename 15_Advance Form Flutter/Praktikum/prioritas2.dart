@@ -205,12 +205,12 @@ class _Prioritas2State extends State<Prioritas2> {
                                     content: Text("Data Berhasil Ditambahkan"),
                                   ));
                                   dataList.add(Data(
-                                    // data yg akan di tambahkan ketika di submit
-                                    name: name,
-                                    nomor: nomor,
-                                    file: file,
-                                    color: _currentColor.value,
-                                  ));
+                                      // data yg akan di tambahkan ketika di submit
+                                      name: name,
+                                      nomor: nomor,
+                                      file: file,
+                                      color: _currentColor.value,
+                                      date: _dueDate));
                                   setState(() {
                                     formKey.currentState!
                                         .reset(); // reset state
@@ -259,7 +259,9 @@ class _Prioritas2State extends State<Prioritas2> {
                                             dataList[i].nomor.toString()),
                                         Text("Date : " +
                                             DateFormat("dd-MM-yyyy").format(
-                                                _dueDate)), // formatting date biar tida include waktu
+                                                dataList[i].date ??
+                                                    DateTime
+                                                        .now())), // formatting date biar tida include waktu
                                         Row(
                                           children: [
                                             Text("Color : "),
@@ -525,7 +527,7 @@ class _Prioritas2State extends State<Prioritas2> {
 class Data {
   String? name;
   String? nomor;
-  String? date;
+  DateTime? date;
   int? color;
   String? file;
 
