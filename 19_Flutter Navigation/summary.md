@@ -14,3 +14,8 @@ adalah bagaimana pengguna berpindah ke halaman lain
 - di definisikan pada main, bisa menggunakan argument sebagai param
 
 # Summary Kelas
+- context mengacu pada halaman saat ini
+- pada saat berpindah page bisa menggunakan parameter, parameter harus string
+- kalau ingin paramater tidak wajib diisi, bisa memakai null savety *String? param*, berarti nilai boleh null
+- pada bagian pemanggilan parameteri tambahkan *paramater ?? "nilai default"* 
+- navigator named biasanya digunakan pada web pada bagian url
