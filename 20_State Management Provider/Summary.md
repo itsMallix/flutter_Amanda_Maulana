@@ -16,4 +16,3 @@
 - local state hanya bisa diakses pada file tertentu
 - notify listener berfungsi agar function yang terhubing dengan add akan reload ketika dipanggil
 - init state pada stateful widget digunakan untuk menginisialisasi keadaan (state) widget saat widget tersebut pertama kali dibuat 
--
