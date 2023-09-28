@@ -69,9 +69,10 @@ class Gallery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color appbar = Color(0xff424242);
-    Color background = Color(0xff303030);
-    Color primary = Color(0xff4C9CA3);
+    Color appbar = const Color(0xff424242);
+    Color background = const Color(0xff303030);
+    Color primary = const Color(0xff4C9CA3);
+    Color alert = Color.fromARGB(255, 163, 76, 76);
 
     return Scaffold(
       backgroundColor: background,
@@ -81,27 +82,22 @@ class Gallery extends StatelessWidget {
         backgroundColor: appbar,
       ),
       body: GridView(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         children: imageList.map(
           (ImageData) {
             return Container(
-              padding: EdgeInsetsDirectional.all(8.0),
+              padding: const EdgeInsetsDirectional.all(8.0),
               child: GestureDetector(
                 onTap: () {
                   showModalBottomSheet(
                     context: context,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(20.0),
-                      ),
-                    ),
                     builder: (BuildContext context) {
                       return Container(
                         color: appbar,
                         child: SizedBox(
-                          height: 300,
+                          height: 300, // ukuran tinggi bottom sheet
                           child: Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -111,8 +107,8 @@ class Gallery extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  margin:
-                                      EdgeInsets.symmetric(horizontal: 15.0),
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 15.0),
                                   child: Stack(
                                     children: [
                                       ClipRRect(
@@ -126,18 +122,21 @@ class Gallery extends StatelessWidget {
                                         child: Row(
                                           children: [
                                             Container(
-                                                margin: EdgeInsetsDirectional
-                                                    .symmetric(horizontal: 5.0),
+                                                margin:
+                                                    const EdgeInsetsDirectional
+                                                        .symmetric(
+                                                        horizontal: 5.0),
                                                 decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             5.0),
                                                     color: Colors.white
                                                         .withOpacity(0.8)),
-                                                child: Icon(Icons
+                                                child: const Icon(Icons
                                                     .local_movies_rounded)),
                                             Container(
-                                              padding: EdgeInsets.all(5.0),
+                                              padding:
+                                                  const EdgeInsets.all(5.0),
                                               decoration: BoxDecoration(
                                                   borderRadius:
                                                       BorderRadius.circular(5),
@@ -145,7 +144,7 @@ class Gallery extends StatelessWidget {
                                                       .withOpacity(0.8)),
                                               child: Text(
                                                 ImageData.name,
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 16.0),
                                               ),
@@ -160,17 +159,21 @@ class Gallery extends StatelessWidget {
                                         child: Row(
                                           children: [
                                             Container(
-                                                margin: EdgeInsetsDirectional
-                                                    .symmetric(horizontal: 5.0),
+                                                margin:
+                                                    const EdgeInsetsDirectional
+                                                        .symmetric(
+                                                        horizontal: 5.0),
                                                 decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             5.0),
                                                     color: Colors.white
                                                         .withOpacity(0.8)),
-                                                child: Icon(Icons.person)),
+                                                child:
+                                                    const Icon(Icons.person)),
                                             Container(
-                                              padding: EdgeInsets.all(5.0),
+                                              padding:
+                                                  const EdgeInsets.all(5.0),
                                               decoration: BoxDecoration(
                                                   borderRadius:
                                                       BorderRadius.circular(5),
@@ -178,7 +181,7 @@ class Gallery extends StatelessWidget {
                                                       .withOpacity(0.8)),
                                               child: Text(
                                                 ImageData.director,
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 16.0),
                                               ),
@@ -193,18 +196,21 @@ class Gallery extends StatelessWidget {
                                         child: Row(
                                           children: [
                                             Container(
-                                                margin: EdgeInsetsDirectional
-                                                    .symmetric(horizontal: 5.0),
+                                                margin:
+                                                    const EdgeInsetsDirectional
+                                                        .symmetric(
+                                                        horizontal: 5.0),
                                                 decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             5.0),
                                                     color: Colors.white
                                                         .withOpacity(0.8)),
-                                                child: Icon(
+                                                child: const Icon(
                                                     Icons.bar_chart_rounded)),
                                             Container(
-                                              padding: EdgeInsets.all(5.0),
+                                              padding:
+                                                  const EdgeInsets.all(5.0),
                                               decoration: BoxDecoration(
                                                   borderRadius:
                                                       BorderRadius.circular(5),
@@ -212,7 +218,7 @@ class Gallery extends StatelessWidget {
                                                       .withOpacity(0.8)),
                                               child: Text(
                                                 ImageData.year,
-                                                style: TextStyle(
+                                                style: const TextStyle(
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 16.0),
                                               ),
@@ -223,20 +229,48 @@ class Gallery extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: primary),
-                                  child: const Text('View Details'),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => GalleryDetails(
-                                            imageData: ImageData),
+                                SizedBox(height: 10),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  // crossAxisAlignment: CrossAxisAlignment.center, // Opsional, tergantung pada kebutuhan Anda
+                                  children: [
+                                    Container(
+                                      width: 100,
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 10),
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: alert,
+                                        ),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: const Text("Back"),
                                       ),
-                                    );
-                                  },
-                                ),
+                                    ),
+                                    Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 10),
+                                      child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: primary,
+                                        ),
+                                        child: const Text('View Details'),
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>
+                                                  GalleryDetails(
+                                                imageData: ImageData,
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ],
+                                )
                               ],
                             ),
                           ),
@@ -252,21 +286,21 @@ class Gallery extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10.0),
                     child: Column(children: [
                       Image.asset(ImageData.imagePath),
-                      SizedBox(height: 10.0),
+                      const SizedBox(height: 10.0),
                       Text(
                         ImageData.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 5.0),
+                      const SizedBox(height: 5.0),
                       Text(
                         ImageData.director,
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       ),
-                      SizedBox(height: 3.0),
+                      const SizedBox(height: 3.0),
                       Text(
                         ImageData.year,
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       )
                     ]),
                   ),

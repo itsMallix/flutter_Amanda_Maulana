@@ -8,9 +8,9 @@ class Assets extends StatefulWidget {
 }
 
 class _AssetsState extends State<Assets> {
-  Color appbar = Color(0xff424242);
-  Color background = Color(0xff303030);
-  Color primary = Color(0xff4C9CA3);
+  Color appbar = const Color(0xff424242);
+  Color background = const Color(0xff303030);
+  Color primary = const Color(0xff4C9CA3);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,23 +20,23 @@ class _AssetsState extends State<Assets> {
         backgroundColor: appbar,
       ),
       drawer: Drawer(
-        backgroundColor: Color(0xff424242),
+        backgroundColor: const Color(0xff424242),
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: 200,
               child: Expanded(
                 flex: 1,
-                child: Container(
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width * 0.85,
                   height: MediaQuery.of(context).size.height * 0.15,
-                  child: DrawerHeader(
+                  child: const DrawerHeader(
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage("assets/images/assets_01.jpg"),
                           fit: BoxFit.cover),
                     ),
-                    child: const Text("Drawer Header"),
+                    child: Text("Drawer Header"),
                   ),
                 ),
               ),
@@ -47,28 +47,28 @@ class _AssetsState extends State<Assets> {
                   ListTile(
                     leading: CircleAvatar(
                       backgroundColor: primary,
-                      child: Icon(Icons.phone_android_rounded,
+                      child: const Icon(Icons.phone_android_rounded,
                           color: Colors.white),
                     ),
-                    title: Text(
+                    title: const Text(
                       "Contact",
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
-                      Navigator.pushNamed(context, "|goto_contact");
+                      Navigator.pushNamed(context, "/Contact");
                     },
                   ),
                   ListTile(
                     leading: CircleAvatar(
                       backgroundColor: primary,
-                      child: Icon(Icons.photo, color: Colors.white),
+                      child: const Icon(Icons.photo, color: Colors.white),
                     ),
-                    title: Text(
+                    title: const Text(
                       "Gallery",
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
-                      Navigator.pushNamed(context, "|goto_gallery");
+                      Navigator.pushNamed(context, "/Gallery");
                     },
                   ),
                 ],
@@ -76,6 +76,35 @@ class _AssetsState extends State<Assets> {
             ),
           ],
         ),
+      ),
+      body: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.all(20.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset("assets/images/type.gif"),
+            ),
+          ),
+          Container(
+            child: const Text(
+              "Flutter Assets",
+              style: TextStyle(fontSize: 20, color: Colors.white),
+            ),
+          ),
+          const SizedBox(height: 20.0),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: const Text(
+              "Flutter assets are resources such as images, fonts, and other files that are bundled with a Flutter application and can be accessed and used within the app",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+              ),
+              textAlign: TextAlign.justify,
+            ),
+          ),
+        ],
       ),
     );
   }
