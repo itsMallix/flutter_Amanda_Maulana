@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 import '17_Assets/assets.dart';
 import '17_Assets/contact.dart';
 import '17_Assets/gallery.dart';
 import '17_Assets/gallery_details.dart';
-import 'package:coba_flutter/17_Assets/gallery.dart';
+// import '15_advanced form/prioritas2_Eksplorasi.dart';
+// import '16_Code Competence/codeCompetence_1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
           // useMaterial3: true,
           fontFamily: 'CeraRoundPro'),
       routes: {
-        "|goto_contact": (context) => const Contact(),
-        "|goto_gallery": (context) => const Gallery(),
+        "/Contact": (context) => const Contact(),
+        "/Gallery": (context) => const Gallery(),
       },
       home: const Assets(),
     );

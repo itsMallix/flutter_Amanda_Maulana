@@ -3,7 +3,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:intl/intl.dart';
-import 'package:intl/number_symbols_data.dart';
 import 'package:open_file/open_file.dart';
 
 class Contact extends StatefulWidget {
@@ -14,10 +13,10 @@ class Contact extends StatefulWidget {
 }
 
 class _ContactState extends State<Contact> {
-  Color appbar = Color(0xff424242);
-  Color background = Color(0xff303030);
+  Color appbar = const Color(0xff424242);
+  Color background = const Color(0xff303030);
   Color typograph = Colors.white;
-  Color primary = Color(0xff4C9CA3);
+  Color primary = const Color(0xff4C9CA3);
 
   TextEditingController updateNameController = TextEditingController();
   TextEditingController updateNomorController = TextEditingController();
@@ -44,7 +43,7 @@ class _ContactState extends State<Contact> {
   DateTime _dueDate = DateTime.now();
   final currentDate = DateTime.now();
 
-  Color _currentColor = Color(0xff4C9CA3);
+  Color _currentColor = const Color(0xff4C9CA3);
   Color generateRandomColor() {
     Random random = Random();
     double randomDouble = random.nextDouble();
@@ -85,7 +84,7 @@ class _ContactState extends State<Contact> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 Container(
                   child: Icon(
                     Icons.phonelink,
@@ -93,7 +92,7 @@ class _ContactState extends State<Contact> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 10.0),
                   child: Text(
                     'Create New Contact',
                     style: TextStyle(
@@ -103,7 +102,7 @@ class _ContactState extends State<Contact> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                  padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
                   child: Text(
                     "A dialog is a type of modal window that appears in front of app content to provide critical information, or prompt for a decision to be made",
                     textAlign: TextAlign.justify,
@@ -131,11 +130,11 @@ class _ContactState extends State<Contact> {
                       child: Column(
                         children: [
                           TextFormField(
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                                 suffixIcon: Icon(Icons.person),
                                 fillColor: Color(0xffe7e0ec),
                                 filled: true,
-                                label: const Text("Name"),
+                                label: Text("Name"),
                                 hintText: "Insert Your Name"),
                             validator: (value) {
                               name = value;
@@ -160,13 +159,13 @@ class _ContactState extends State<Contact> {
                               return null;
                             },
                           ),
-                          SizedBox(height: 20.0),
+                          const SizedBox(height: 20.0),
                           TextFormField(
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                                 suffixIcon: Icon(Icons.phone_android),
                                 fillColor: Color(0xffe7e0ec),
                                 filled: true,
-                                label: const Text("Nomor"),
+                                label: Text("Nomor"),
                                 hintText: "+62...."),
                             validator: (value) {
                               nomor = value;
@@ -193,13 +192,13 @@ class _ContactState extends State<Contact> {
                               BuildDatePicker(context),
                               BuildColorPicker(context),
                               BuildFilePicker(),
-                              SizedBox(height: 10.0),
+                              const SizedBox(height: 10.0),
                             ],
                           ),
                           Divider(
                             color: typograph,
                           ),
-                          Container(
+                          SizedBox(
                             height: 45.0,
                             width: double.infinity,
                             child: ElevatedButton(
@@ -228,7 +227,7 @@ class _ContactState extends State<Contact> {
                               },
                             ),
                           ),
-                          SizedBox(height: 10.0),
+                          const SizedBox(height: 10.0),
                           Container(
                             child: const Text(
                               "List Contact",
@@ -238,25 +237,25 @@ class _ContactState extends State<Contact> {
                                   color: Colors.white),
                             ),
                           ),
-                          SizedBox(height: 10.0),
+                          const SizedBox(height: 10.0),
                           for (var i = 0; i < dataList.length; i++)
                             Column(
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(bottom: 10.0),
+                                  margin: const EdgeInsets.only(bottom: 10.0),
                                   decoration: BoxDecoration(
                                     color: Colors.grey[200],
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: ListTile(
                                     leading: CircleAvatar(
-                                      backgroundColor: Color(0xff6750A4),
+                                      backgroundColor: const Color(0xff6750A4),
                                       child: Text(
                                         dataList[i].name != null &&
                                                 dataList[i].name!.isNotEmpty
                                             ? dataList[i].name![0].toUpperCase()
                                             : '',
-                                        style: TextStyle(color: Colors.white),
+                                        style: const TextStyle(color: Colors.white),
                                       ),
                                     ),
                                     title: Text(dataList[i].name.toString()),
@@ -264,14 +263,12 @@ class _ContactState extends State<Contact> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text("Nomor : " +
-                                            dataList[i].nomor.toString()),
-                                        Text("Date : " +
-                                            DateFormat("dd-MM-yyyy")
-                                                .format(_dueDate)),
+                                        Text("Nomor : ${dataList[i].nomor}"),
+                                        Text("Date : ${DateFormat("dd-MM-yyyy")
+                                                .format(_dueDate)}"),
                                         Row(
                                           children: [
-                                            Text("Color : "),
+                                            const Text("Color : "),
                                             Container(
                                               width: 35.0,
                                               height: 15.0,
@@ -280,9 +277,8 @@ class _ContactState extends State<Contact> {
                                             ),
                                           ],
                                         ),
-                                        Text("File : " +
-                                            (dataList[i].file ??
-                                                "No file selected")),
+                                        Text("File : ${dataList[i].file ??
+                                                "No file selected"}"),
                                       ],
                                     ),
                                     trailing: Row(
@@ -298,12 +294,12 @@ class _ContactState extends State<Contact> {
                                               context: context,
                                               builder: (BuildContext context) =>
                                                   AlertDialog(
-                                                title: Text("Edit Data"),
+                                                title: const Text("Edit Data"),
                                                 content: Padding(
                                                   padding:
                                                       const EdgeInsets.all(2.0),
                                                   child: Form(
-                                                    child: Container(
+                                                    child: SizedBox(
                                                       height: 200.0,
                                                       child: Column(
                                                         children: <Widget>[
@@ -313,7 +309,7 @@ class _ContactState extends State<Contact> {
                                                             decoration: InputDecoration(
                                                                 labelText:
                                                                     "Name",
-                                                                icon: Icon(Icons
+                                                                icon: const Icon(Icons
                                                                     .account_box),
                                                                 hintText: dataList[
                                                                         i]
@@ -326,14 +322,14 @@ class _ContactState extends State<Contact> {
                                                             decoration: InputDecoration(
                                                                 labelText:
                                                                     "Nomor",
-                                                                icon: Icon(
+                                                                icon: const Icon(
                                                                     Icons.call),
                                                                 hintText: dataList[
                                                                         i]
                                                                     .nomor
                                                                     .toString()),
                                                           ),
-                                                          SizedBox(
+                                                          const SizedBox(
                                                               height: 20.0),
                                                           Align(
                                                             alignment: Alignment
@@ -361,7 +357,7 @@ class _ContactState extends State<Contact> {
                                                                     .pop();
                                                                 setState(() {});
                                                               },
-                                                              child: Text(
+                                                              child: const Text(
                                                                   "Update"),
                                                             ),
                                                           ),
@@ -373,7 +369,7 @@ class _ContactState extends State<Contact> {
                                               ),
                                             );
                                           },
-                                          icon: Icon(Icons.edit),
+                                          icon: const Icon(Icons.edit),
                                         ),
                                         IconButton(
                                           onPressed: () {
@@ -381,19 +377,19 @@ class _ContactState extends State<Contact> {
                                               context: context,
                                               builder: (BuildContext context) =>
                                                   AlertDialog(
-                                                title: Text("Hapus Akun"),
-                                                content: Text(
+                                                title: const Text("Hapus Akun"),
+                                                content: const Text(
                                                     "Apakah Anda yakin untuk menghapus akun?"),
                                                 actions: <Widget>[
                                                   TextButton(
-                                                    child: Text("Batal"),
+                                                    child: const Text("Batal"),
                                                     onPressed: () {
                                                       Navigator.of(context)
                                                           .pop();
                                                     },
                                                   ),
                                                   TextButton(
-                                                    child: Text("Hapus"),
+                                                    child: const Text("Hapus"),
                                                     onPressed: () {
                                                       setState(
                                                         () {
@@ -408,7 +404,7 @@ class _ContactState extends State<Contact> {
                                               ),
                                             );
                                           },
-                                          icon: Icon(Icons.delete),
+                                          icon: const Icon(Icons.delete),
                                         ),
                                       ],
                                     ),
