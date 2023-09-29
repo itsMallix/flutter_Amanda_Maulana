@@ -12,3 +12,8 @@
 - bersifat private
 - menggunakan sqlite db melalui package
 - sqlite adalah db open source yang mendukun crud
+# Summary Kelas
+- ketika user login data" akan disimpan pada local storage
+- shared preference digunakan untuk simple data
+- akan bertahan pada disk async dan tidak ada jaminan akan bertahan setelah kembali
+- formkey lebih efisien, namun secara analisis lebih safe menggunakan controller masing" text form field
