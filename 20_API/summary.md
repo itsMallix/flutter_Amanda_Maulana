@@ -36,3 +36,9 @@
 
 # Serialisasi JSON
 - mengubah struktur data kedalam bentuk JSON
+- menggunakan package convert untuk serialisasi 
+- setiap key harus string pada JSON
+
+# Deserialisasi JSON
+- mengubah JSON kedalam bentuk struktur data
+- 
