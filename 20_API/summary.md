@@ -41,4 +41,3 @@
 
 # Deserialisasi JSON
 - mengubah JSON kedalam bentuk struktur data
-- 
