@@ -8,10 +8,11 @@
 - REST API adalah lapisan/ jembatan antara server degan client
 - API mengirim response degnan format tertentu biasanya json
 - Json adalah javascript object notation (sekumpulan data yang dikelompokkan berupa map atau array)
+
 # HTTP
 - protokul yang digunakan untuk berkirim data pada internet, biasanya data tersebut benbentuk media web
 - pola komunikasi http mirip seperti API, mengirim request dan memberi response
-- 
+
 # Struktur Request
 ### URL / endpoint
 - alamat halaman yang akan diakses
@@ -29,3 +30,9 @@
 - informasi tambahan terkait responses yang diberikan
 ### Body
 - data yang disertakan bersama response
+
+# Dio
+- package sebagai protokol atau http client dan dimanfaatkan untuk melakukan REST API
+
+# Serialisasi JSON
+- mengubah struktur data kedalam bentuk JSON
