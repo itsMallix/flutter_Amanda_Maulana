@@ -581,6 +581,8 @@ class _CodeCompentence1State extends State<CodeCompentence1> {
                                               ),
                                               TextButton(
                                                 onPressed: () {
+                                                  Navigator.of(context).pop();
+
                                                   ScaffoldMessenger.of(context)
                                                       .showSnackBar(
                                                     const SnackBar(
