@@ -18,3 +18,6 @@
 - menggunakan multiprovider agar dapat menggunakan banyak viewmodel
 - materialapp sebagai child utama
 - pada view menggunakan stateful widget
+## Summary Kelas
+- dalam provider viewmodel disebut manager
+- viewmodel bisa mengacu pada controller like mvc
