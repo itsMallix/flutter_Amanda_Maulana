@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:coba_bloc/17_Assets/models/colors.dart';
+import 'package:coba_bloc/17_Assets/component/colors.dart';
 
 class Assets extends StatefulWidget {
   const Assets({super.key});

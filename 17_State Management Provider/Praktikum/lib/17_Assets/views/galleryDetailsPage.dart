@@ -1,14 +1,15 @@
+import 'package:coba_bloc/17_Assets/controllers/c_selectedGallery.dart';
 import 'package:flutter/material.dart';
-import 'galleryPage.dart';
-import 'package:coba_bloc/17_Assets/models/colors.dart';
-import 'package:coba_bloc/17_Assets/models/movie.dart';
+import 'package:coba_bloc/17_Assets/component/colors.dart';
+import 'package:provider/provider.dart';
 
 class GalleryDetails extends StatelessWidget {
-  final ImageData imageData;
-  const GalleryDetails({super.key, required this.imageData});
+  const GalleryDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final selectedImagePath =
+        Provider.of<SelectedImageProvider>(context).selectedImagePath;
     return Scaffold(
       backgroundColor: background,
       appBar: AppBar(
@@ -19,7 +20,7 @@ class GalleryDetails extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Image.asset(imageData.imagePath),
+            Image.asset(selectedImagePath),
           ],
         ),
       ),

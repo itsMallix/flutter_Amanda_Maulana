@@ -4,3 +4,4 @@ Color appbar = const Color(0xff424242);
 Color background = const Color(0xff303030);
 Color typograph = Colors.white;
 Color primary = const Color(0xff4C9CA3);
+Color alert = const Color.fromARGB(255, 163, 76, 76);

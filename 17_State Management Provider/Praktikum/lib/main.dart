@@ -1,15 +1,19 @@
+import 'package:coba_bloc/17_Assets/controllers/c_contact.dart';
+import 'package:coba_bloc/17_Assets/controllers/c_gallery.dart';
+import 'package:coba_bloc/17_Assets/controllers/c_selectedGallery.dart';
 import 'package:flutter/material.dart';
-import '17_Assets/assetsPage.dart';
-import '17_Assets/contactPage.dart';
-import '17_Assets/galleryPage.dart';
+import '17_Assets/views/assetsPage.dart';
+import '17_Assets/views/contactPage.dart';
+import '17_Assets/views/galleryPage.dart';
 import 'package:provider/provider.dart';
-import '17_Assets/models/contact.dart';
 
 void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => ContactData()),
+        ChangeNotifierProvider(create: (_) => ContactController()),
+        ChangeNotifierProvider(create: (_) => GalleryController()),
+        ChangeNotifierProvider(create: (_) => SelectedImageProvider()),
       ],
       child: const MyApp(),
     ),
