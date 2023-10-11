@@ -54,3 +54,6 @@
 - akuntabilitas dan tanggung jawab
 - privasi dan keamanan
 - ketergantungan teknologi
+
+## Summary
+- machine learning adalah program belajar berdasarkan data dan akan menghasikan model (hasil belajar)
