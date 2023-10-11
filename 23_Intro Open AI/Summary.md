@@ -25,7 +25,7 @@
 - speech recognition
 - autonomouse vehicle
 - sentiment analys
-## #Penggunaan AI dalam Software Developemnt
+### Penggunaan AI dalam Software Developemnt
 - openAI codex - Github Copilot
 - tabnin AI
 - chat.openai
