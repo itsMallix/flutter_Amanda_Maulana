@@ -19,7 +19,7 @@ class _EksplorasiState extends State<Eksplorasi> {
     final seed = _seedController.text;
     setState(() {
       imageUrl =
-          'https://api.dicebear.com/7.x/adventurer/svg?backgroundColor=b6e3f4,c0aede,d1d4f9&seed=$seed';
+          'https://api.dicebear.com/7.x/open-peeps/svg?backgroundColor=b6e3f4,c0aede,d1d4f9&seed=$seed';
     });
   }
 

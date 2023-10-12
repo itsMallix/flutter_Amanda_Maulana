@@ -11,7 +11,11 @@ class Prioritas2 extends StatefulWidget {
 
 class _Prioritas2State extends State<Prioritas2> {
   final List<String> imageModel = [
-    "https://api.dicebear.com/7.x/pixel-art/svg",
+    "https://api.dicebear.com/7.x/bottts/svg?seed=Hypnos",
+    "https://api.dicebear.com/7.x/bottts/svg?seed=Abystigma",
+    "https://api.dicebear.com/7.x/bottts/svg?seed=Veritas",
+    "https://api.dicebear.com/7.x/bottts/svg?seed=Hyperion",
+    "https://api.dicebear.com/7.x/bottts/svg?seed=Rozen",
   ];
   List<String> loadImageModel = [];
 
@@ -57,8 +61,8 @@ class _Prioritas2State extends State<Prioritas2> {
                     for (final i in imageModel)
                       SvgPicture.network(
                         i,
-                        width: 50,
-                        height: 50,
+                        width: 100,
+                        height: 100,
                         placeholderBuilder: (context) =>
                             const CircularProgressIndicator(),
                       )
