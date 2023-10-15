@@ -1,0 +1,36 @@
+Template : Pros And Con Discusser
+
+============================================================================
+
+Input : 
+Analyze the pros and cons of ganjar pranowo vs prabowo subianto
+
+Output :
+Ganjar Pranowo:
+
+Pros:
+1. Experience: Ganjar Pranowo has served as the Governor of Central Java since 2013, giving him a strong background in governance and administration.
+2. Track record: Under Ganjar's leadership, Central Java has seen economic growth and improvements in infrastructure, education, and healthcare.
+3. Grassroots support: Ganjar is known for his ability to connect with people at the grassroots level, which has helped him gain popularity and support among the local population.
+4. Non-controversial image: Ganjar has maintained a relatively clean image, with no major corruption scandals or controversies surrounding his name.
+
+Cons:
+1. Limited national experience: Ganjar's experience is primarily limited to the provincial level, which might raise concerns about his ability to handle national-level issues and policies.
+2. Lack of name recognition: Compared to Prabowo Subianto, Ganjar may have less name recognition and might struggle to compete on a national stage.
+3. Political alliances: Ganjar's political alliances and affiliations might come into question, as he belongs to the Indonesian Democratic Party of Struggle (PDI-P), which some consider to have a controversial history.
+
+Prabowo Subianto:
+
+Pros:
+1. Military background: Prabowo has a military background and served as the Commander of the Army Strategic Reserve Command, which could be seen as an advantage in terms of national security and defense.
+2. Economic expertise: Prabowo has a degree in economics and has been involved in business ventures, which might equip him with knowledge and skills to handle economic policies.
+3. Strong political base: Prabowo has a loyal following and strong support among certain segments of society, which could contribute to his chances in an election.
+4. National-level experience: Prabowo has run for president twice in previous elections, which has given him experience in national-level campaigning and policy debates.
+
+Cons:
+1. Controversial past: Prabowo's military career has been marred by allegations of human rights abuses, including involvement in kidnappings and forced disappearances, which raises concerns about his commitment to human rights and democracy.
+2. Economic policies: Prabowo's economic policies, which have included protectionism and nationalism, have been criticized for potentially stifling economic growth and development.
+3. Lack of trust: Prabowo's previous political alliances and switching of parties have led to concerns about his credibility and trustworthiness.
+4. Polarizing figure: Prabowo's strong and sometimes divisive rhetoric has resulted in a polarized perception of his candidacy, which could hinder his ability to gain broad-based support.
+
+============================================================================
